@@ -1,0 +1,17 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.get("http://localhost:8000/api/users/me/", function (data) {
+            console.log(data)
+        })
+    })
+</script>
+</body>
+</html>

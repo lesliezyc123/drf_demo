@@ -8,7 +8,8 @@ from rest_framework.permissions import IsAuthenticated
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
 import re
-# Create your views here.
+from django.views.decorators.csrf import csrf_exempt
+
 
 # User用户信息
 class UserView(APIView):
@@ -27,6 +28,7 @@ class UserView(APIView):
 
 # 注册用户
 class newUserView(APIView):
+    @csrf_exempt
     def post(self, request):
 
         surname = request.data.get("surname")

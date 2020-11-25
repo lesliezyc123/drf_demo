@@ -6,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
-# 用户信息
+# User鐢ㄦ埛淇℃伅
 class UserView(APIView):
     def get(self, request):
         user_id = request.user.id
